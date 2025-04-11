@@ -1,27 +1,108 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
     <ion-title>
-      Inbox
+      LOGO
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
+<ion-content>
+  <!-- Hero Section -->
 
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Inbox
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <section class="hero bg-primary ion-padding">
+    <ion-grid>
+      <ion-row class="ion-text-center ion-justify-content-center align-items-center">
+        <ion-col size-lg="3" size-sm="8" size-md="7"><h1 class="header bolder">Discover the magic of our surprise
+          box</h1></ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center ion-justify-content-center align-items-center">
+        <ion-col size-lg="3" size-sm="8" size-md="7"><p class="sub-header">Unleash your child's curiosity with our
+          educational subscription box
+          filled with
+          fun and
+          learning.</p></ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center ion-justify-content-center align-items-center">
+        <ion-col size="12">
+          <ion-button shape="round" color="light">Subscribe Now</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center ion-justify-content-center align-items-center">
+        <img src="assets/images/hero.svg" alt="box">
+      </ion-row>
+    </ion-grid>
+  </section>
 
-  <ion-list>
-    @for (message of getMessages(); track message) {
-      <app-message [message]="message"></app-message>
-    }
-  </ion-list>
+  <section class="subscribe image-subscribe-bg">
+    <ion-grid>
+      <ion-row class="ion-text-center ion-justify-content-center align-items-center">
+        <ion-col size-lg="6" size-sm="8" size-md="7"><h1 class="header bolder">How It Works: Subscribe and Receive Your Surprise Box</h1></ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center ion-justify-content-center align-items-center">
+        <ion-col size-lg="6" size-sm="8" size-md="7"><p class="sub-header">Subscribe to our surprise subscription box and give your child the gift of learning. Each month, we curate a box filled with educational materials tailored to your child's age and interests.</p></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size-lg="4" size-sm="12" size-md="6">
+          <ion-item>
+            <ion-avatar>
+              <img alt="subscribe" src="assets/icon/subscribe.svg" />
+            </ion-avatar>
+            <ion-label>
+              <span>Step 1</span>
+              <h2>Subscribe</h2>
+              <p>Select a subscription plan that suits your child's learning needs and preferences.</p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size-lg="4" size-sm="8" size-md="6">
+          <ion-item>
+            <ion-avatar>
+              <img alt="personalise" src="assets/icon/personalise.svg" />
+            </ion-avatar>
+            <ion-label>
+              <span>Step 2</span>
+              <h2>Personalise Your Box</h2>
+              <p>Tell us about your child's age, interests, and learning goals, and we'll customize their surprise box accordingly.</p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size-lg="4" size-sm="8" size-md="6">
+          <ion-item>
+            <ion-avatar>
+              <img alt="surprise" src="assets/icon/surprise.svg" />
+            </ion-avatar>
+            <ion-label>
+              <span>Step 3</span>
+              <h2>Receive Your Surprise Box</h2>
+              <p>Sit back and relax as your child eagerly awaits the arrival of their monthly surprise box filled with engaging learning materials.</p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-text-center ion-justify-content-center align-items-center">
+        <ion-col size="12">
+          <ion-button shape="round" color="light">Subscribe Now</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+  <section class="footer ion-padding ion-margin-top">
+    <ion-grid>
+      <ion-row class="ion-padding-vertical" style="border-top: 1px solid #000;">
+        <ion-col size="6" class="ion-no-padding">
+          <div class="ion-justify-content-start ">
+            <a class="ion-color-dark ion-padding-end">Privacy Policy</a>
+            <a class="ion-color-dark ion-padding-end">Terms of Service</a>
+            <a class="ion-color-dark ion-padding-end">Cookies Settings</a>
+          </div>
+
+        </ion-col>
+        <ion-col size="6" class="ion-text-end">
+          <a class="ion-color-dark">© 2023 MyEdu. All rights reserved.</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
 </ion-content>
